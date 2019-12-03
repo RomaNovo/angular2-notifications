@@ -1,81 +1,30 @@
 {
   "name": "angular2-notifications",
-  "typings": "./dist/index.d.ts",
   "version": "1.0.3",
-  "scripts": {
-    "build": "gulp build",
-    "build:watch": "gulp",
-    "docs": "npm run docs:build",
-    "docs:build": "compodoc -p tsconfig.json -n angular2-notifications -d docs --hideGenerator",
-    "docs:serve": "npm run docs:build -- -s",
-    "docs:watch": "npm run docs:build -- -s -w",
-    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "lite": "lite-server",
-    "playground:build": "tsc -p playground -w",
-    "playground": "concurrently \"npm run build:watch\" \"npm run playground:build\" \"npm run lite\"",
-    "publish": "npm run build && npm publish dist"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/repo"
+    "url": "https://github.com/flauc/angular2-notifications"
   },
   "author": {
     "name": "Filip Lauc",
     "email": "filip.lauc93@gmail.com"
   },
   "keywords": [
-    "Angular",
-    "Angular 2",
-    "Library",
-    "Notifications",
-    "Notification",
-    "Toast"
+    "angular"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/username/repo/issues"
+    "url": "https://github.com/flauc/angular2-notifications/issues"
   },
-  "homepage": "https://github.com/flauc/angular2-notifications",
-  "devDependencies": {
-    "@angular/animations": "6.0.0",
-    "@angular/common": "6.0.0",
-    "@angular/compiler": "6.0.0",
-    "@angular/compiler-cli": "6.0.0",
-    "@angular/core": "6.0.0",
-    "@angular/platform-browser": "6.0.0",
-    "@angular/platform-browser-dynamic": "6.0.0",
-    "@compodoc/compodoc": "1.1.2",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "10.0.4",
-    "angular-in-memory-web-api": "0.6.0",
-    "codelyzer": "4.3.0",
-    "concurrently": "3.4.0",
-    "core-js": "2.5.6",
-    "del": "2.2.2",
-    "gulp": "3.9.1",
-    "gulp-rename": "1.2.2",
-    "gulp-rollup": "2.15.0",
-    "jasmine-core": "2.5.2",
-    "jasmine-spec-reporter": "3.2.0",
-    "karma": "1.4.1",
-    "karma-chrome-launcher": "2.0.0",
-    "karma-cli": "1.0.1",
-    "karma-coverage-istanbul-reporter": "0.2.0",
-    "karma-jasmine": "1.1.0",
-    "karma-jasmine-html-reporter": "0.2.2",
-    "lite-server": "2.3.0",
-    "node-watch": "0.5.2",
-    "protractor": "5.1.0",
-    "rollup": "0.49.3",
-    "run-sequence": "1.2.2",
-    "rxjs": "6.1.0",
-    "systemjs": "0.20.12",
-    "ts-node": "2.0.0",
-    "tslint": "5.10.0",
-    "typescript": "2.7.2",
-    "zone.js": "0.8.26"
-  },
-  "engines": {
-    "node": ">=6.0.0"
+  "main": "angular2-notifications.umd.js",
+  "module": "angular2-notifications.js",
+  "jsnext:main": "angular2-notifications.js",
+  "typings": "angular2-notifications.d.ts",
+  "peerDependencies": {
+    "@angular/animations": "^6.0.0",
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "rxjs": "^6.1.0",
+    "zone.js": "^0.8.26"
   }
 }
