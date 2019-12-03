@@ -21,15 +21,15 @@ import {NotificationsService} from '../../services/notifications.service';
     trigger('enterLeave', [
 
       // Fade
-      state('fade', style({opacity: 1})),
+      state('fade', style({opacity: 1, bottom: '-20px'})),
       transition('* => fade', [
         style({opacity: 0}),
-        animate('400ms ease-in-out')
+        animate('1000ms ease-in-out')
       ]),
-      state('fadeOut', style({opacity: 0})),
+      state('fadeOut', style({opacity: 0, bottom: '-400px'})),
       transition('fade => fadeOut', [
         style({opacity: 1}),
-        animate('300ms ease-in-out')
+        animate('1000ms ease-in-out')
       ]),
 
       // Enter from top
@@ -251,7 +251,9 @@ export class NotificationComponent implements OnInit, OnDestroy {
         this.notificationService.set(this.item, false);
       }, 310);
     } else {
-      this.notificationService.set(this.item, false);
+      setTimeout(() => {
+        this.notificationService.set(this.item, false);
+      }, 5310);
     }
   }
 
